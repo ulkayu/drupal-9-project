@@ -1,7 +1,7 @@
 diff --git a/core/includes/install.core.inc b/core/includes/install.core.inc
 index a155778e83..2149e01487 100644
---- a/core/includes/install.core.inc
-+++ b/core/includes/install.core.inc
+--- a/includes/install.core.inc
++++ b/includes/install.core.inc
 @@ -524,7 +524,10 @@ function install_begin_request($class_loader, &$install_state) {
  
      // Do not install over a configured settings.php.
