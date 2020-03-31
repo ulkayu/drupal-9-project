@@ -22,12 +22,6 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "extra": {
-        "patches": {
-            "drupal/core": {
-                "install failure": "https://raw.githubusercontent.com/stevector/drupal-project/drupal9-3/patches/issue-1--core-install-error.patch",
-                "db version": "https://raw.githubusercontent.com/stevector/drupal-project/drupal9-3/patches/issue-2--mariadb-version.patch"
-            }
-        },
         "installer-paths": {
             "web/core": ["type:drupal-core"],
             "web/libraries/{$name}": ["type:drupal-library"],
