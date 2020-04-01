@@ -9,7 +9,7 @@ index 833bce7507..c12cc75f2d 100644
 -  const MARIADB_MINIMUM_VERSION = '10.3.7';
 +   // Set the MARIADB version to the one available on Pantheon.
 +   // https://github.com/stevector/drupal-9-project/issues/2
-+   const MARIADB_MINIMUM_VERSION = '10.0.23';
++   const MARIADB_MINIMUM_VERSION = '10.0.22';
 +   // const MARIADB_MINIMUM_VERSION = '10.3.7';
  
    /**
