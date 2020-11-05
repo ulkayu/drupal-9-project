@@ -1,2 +1,3 @@
 test line 1
 new line for commit test 1
+new line for commit 2
