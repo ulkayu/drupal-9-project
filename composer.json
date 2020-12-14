@@ -10,13 +10,11 @@
         },
         {
             "type": "path",
-            "url": "upstream"
+            "url": "upstream-configuration"
         }
     ],
     "require": {
-        "composer/installers": "^1.8",
-        "drupal/honeypot": "^2.0",
-        "internal/upstream-configuration": "*"
+        "pantheon-upstreams/upstream-configuration": "*"
     },
     "conflict": {
             "drupal/drupal": "*"
@@ -24,20 +22,14 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "extra": {
-        "enable-patching": true,
         "installer-paths": {
             "web/core": ["type:drupal-core"],
             "web/libraries/{$name}": ["type:drupal-library"],
-            "web/modules/contrib/{$name}": ["type:drupal-module"],
-            "web/profiles/contrib/{$name}": ["type:drupal-profile"],
-            "web/themes/contrib/{$name}": ["type:drupal-theme"],
+            "web/modules/composer/{$name}": ["type:drupal-module"],
+            "web/profiles/composer/{$name}": ["type:drupal-profile"],
+            "web/themes/composer/{$name}": ["type:drupal-theme"],
             "drush/Commands/contrib/{$name}": ["type:drupal-drush"],
             "web/private/scripts/quicksilver/{$name}/": ["type:quicksilver-script"]
-        },
-        "patches": {
-            "drupal/core": {
-                "db version": "https://raw.githubusercontent.com/stevector/drupal-9-project/master/patches/issue-2--mariadb-version.patch"
-            }
         },
         "composer-exit-on-patch-failure": true,
         "patchLevel": {
@@ -52,7 +44,8 @@
             },
             "file-mapping": {
                 "[project-root]/.editorconfig": false,
-                "[project-root]/pantheon.upstream.yml": false
+                "[project-root]/pantheon.upstream.yml": false,
+                "[project-root]/.gitattributes": false
             }
         }
     },
@@ -61,8 +54,7 @@
         "preferred-install": "dist",
         "sort-packages": true,
         "platform": {
-            "php": "7.3"
+            "php": "7.4"
         }
-    },
-    "version": "1.0.0"
+    }
 }
